@@ -1,9 +1,5 @@
 price = {"Sprite": 1.50, "Tea": 2.00, "Coffee": 1.00, "Water": 0.50}
 shopping_basket = {}
-x = 'qwerqwer'
-y = '123123'
-while input("Username: ") != x or input("Password: ") != y:
-    print("Incorrect Username/Password!!!")
 print('♝♝♝♝♝♝♝♝♝♝♝♝♝♝♝♝♝♝♝♝')
 print("Welcome to the online drink store!\nThese are the drinks we offer\n1. Sprite: $1.50\n2. Tea: $2.00\n3. Coffee: $1.00\n4. Water: $0.50")
 print('♝♝♝♝♝♝♝♝♝♝♝♝♝♝♝♝♝♝♝♝')

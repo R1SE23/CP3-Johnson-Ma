@@ -16,4 +16,7 @@ for x in range(Number):
         star = "*"*(2*x+1)
         text = text + space*" " + star + space*" "
     print(text)
-
+# Another Solution
+num = int(input("Enter a number:"))
+for i in range(num):
+        print(" "*(num-i-1)+"*"*((i*2)+1))
