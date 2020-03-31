@@ -1,0 +1,54 @@
+from tkinter import *
+import math
+def leftClickButton(event):
+    squared = math.pow(float(textBoxHeight.get())/100,2)
+    cal = float(textBoxWeight.get())/squared
+    print(cal)
+    labelResult.configure(text = cal)
+
+def anotherButton(event):
+    squared = math.pow(float(textBoxHeight.get()) / 100, 2)
+    cal = float(textBoxWeight.get()) / squared
+    if cal > 30.0:
+        print(labelRecommend.configure(text ='Obesity Class 2'))
+    elif cal >= 25.0 and cal <= 29.9:
+        print(labelRecommend.configure(text ='Obesity Class 1'))
+    elif cal >= 23.0 and cal <= 24.9:
+        print(labelRecommend.configure(text ='Overweight'))
+    elif cal >= 18.6 and cal <= 22.9:
+        print(labelRecommend.configure(text ="Normal Weight"))
+    elif cal < 18.5:
+        print(labelRecommend.configure(text ="Underweight"))
+
+
+
+
+MainWindow = Tk()
+
+labelHeight = Label(MainWindow, text = 'Height(cm)',bg ="green")
+labelHeight.grid(row=0, column=0)
+
+textBoxHeight = Entry(MainWindow)
+textBoxHeight.grid(row=0, column=1)
+
+labelWeight = Label(MainWindow, text = 'Weight(Kg)',bg ="red")
+labelWeight.grid(row=1, column=0)
+
+textBoxWeight = Entry(MainWindow)
+textBoxWeight.grid(row=1, column=1)
+
+calculateButton = Button(MainWindow,text = 'Calculate')
+calculateButton.bind("<Button-1>", leftClickButton)
+calculateButton.grid(row=2,column=0)
+
+recommendButton = Button(MainWindow,text = 'Calculate')
+recommendButton.bind("<Button-1>", anotherButton)
+recommendButton.grid(row=3,column=0)
+
+labelResult = Label(MainWindow, text = 'Result ')
+labelResult.grid(row=2, column=1)
+
+labelRecommend = Label(MainWindow, text = 'Considered')
+labelRecommend.grid(row=3, column=1)
+
+MainWindow.mainloop()
