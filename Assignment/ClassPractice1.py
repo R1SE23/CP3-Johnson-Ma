@@ -5,7 +5,7 @@ class animal():
 class cat(animal):
     def setName(self,text):
         self.name = text
-        print("FUCK", self.name)
+        print("DUCK", self.name)
     def eat(self):
         print("Meoww !",self.name)
 cat1 = cat()
