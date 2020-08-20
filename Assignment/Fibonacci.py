@@ -15,6 +15,8 @@ def gen_fib():
         while i < (count - 1):
             fib.append(fib[i] + fib[i - 1])
             i += 1
+    user_select = int(input("Position: "))
 
-    return fib
+    return fib, fib[user_select-1]
+
 print(gen_fib())
